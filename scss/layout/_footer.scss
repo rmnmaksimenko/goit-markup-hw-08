@@ -59,12 +59,19 @@
 /* стиль раздела соцсетей в футере */
 
 .footer-social-network__container {
-  margin-left: 70px;
+  margin-top: 60px;
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
+    margin-left: 70px;
+  }
 }
 
 .footer--flex {
   align-items: baseline;
   display: flex;
+  @media screen and (max-width: 1199px) {
+    flex-direction: column;
+  }
 }
 
 .footer-social-network {
@@ -76,16 +83,23 @@
 /* стиль раздела с подпиской на рассылку */
 
 .footer-spam__container {
-  margin-left: 93px;
+  margin-top: 60px;
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
+    margin-left: 93px;
+  }
 }
 
 .footer-spam__form {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: 1200px) {
+    align-items: flex-end;
+  }
 }
 
 .footer-spam__label {
-  margin-right: 12px;
 }
 
 // поле ввода почты
@@ -116,6 +130,11 @@
 
 .footer-spam__submit {
   display: flex;
+  margin-top: 20px;
+  @media screen and (min-width: 1200px) {
+    margin-top: 0px;
+    margin-left: 12px;
+  }
   @include main-button(29px, 28px);
 
   &-text {

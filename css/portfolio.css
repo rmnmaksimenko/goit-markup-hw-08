@@ -219,7 +219,12 @@ img {
 
 /* общий стиль секций */
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding: 94px 0;
+  }
 }
 
 /* - - - - - - - заголовки - - - - - - - */
@@ -428,7 +433,13 @@ button {
 
 /* стиль раздела соцсетей в футере */
 .footer-social-network__container {
-  margin-left: 70px;
+  margin-top: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-social-network__container {
+    margin-top: 0;
+    margin-left: 70px;
+  }
 }
 
 .footer--flex {
@@ -438,6 +449,14 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+@media screen and (max-width: 1199px) {
+  .footer--flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .footer-social-network {
@@ -475,20 +494,33 @@ button {
 
 /* стиль раздела с подпиской на рассылку */
 .footer-spam__container {
-  margin-left: 93px;
+  margin-top: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-spam__container {
+    margin-top: 0;
+    margin-left: 93px;
+  }
 }
 
 .footer-spam__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-
-.footer-spam__label {
-  margin-right: 12px;
+@media screen and (min-width: 1200px) {
+  .footer-spam__form {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
 }
 
 .footer-spam__input {
@@ -534,6 +566,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 20px;
   padding-left: 29px;
   padding-right: 28px;
   padding-top: 10px;
@@ -549,6 +582,12 @@ button {
   color: #fff;
   background-color: #2196f3;
   border-radius: 4px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-spam__submit {
+    margin-top: 0px;
+    margin-left: 12px;
+  }
 }
 .footer-spam__submit:hover, .footer-spam__submit:focus {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
