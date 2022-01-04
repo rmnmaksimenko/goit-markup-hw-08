@@ -26,13 +26,18 @@
   }
 }
 
-@mixin flex-basis__function($column) {
-  flex-basis: calc((100% + var(--grid-indent)) / $column - var(--grid-indent));
-  margin-right: var(--grid-indent);
+// @mixin flex-basis__function($column) {
+//   flex-basis: calc((100% + var(--grid-indent)) / $column - var(--grid-indent));
+//   margin-right: var(--grid-indent);
 
-  &:nth-child(#{$column}n) {
-    margin-right: 0;
-  }
+//   &:nth-child(#{$column}n) {
+//     margin-right: 0;
+//   }
+// }
+
+@mixin width__function($column) {
+  width: calc((100% - #{$column} * 30px) / #{$column});
+  margin: 15px;
 }
 
 // синяя кнопка, использующаяся во всём проекте

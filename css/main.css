@@ -658,7 +658,6 @@ button {
     margin: -15px;
   }
   .why-us__item {
-    width: calc((100% - 4 * 30px) / 4);
     margin: 15px;
   }
 }
@@ -677,51 +676,57 @@ button {
 }
 
 /* - - - раздел "чем мы занимаемся" - - - */
-.work__section {
-  padding-top: 0;
+@media screen and (max-width: 1199px) {
+  .work__section {
+    display: none;
+  }
 }
+@media screen and (min-width: 1200px) {
+  .work__section {
+    padding-top: 0;
+  }
 
-.work {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-.work__item {
-  position: relative;
-  -ms-flex-preferred-size: calc((100% + var(--grid-indent)) / 3 - var(--grid-indent));
-      flex-basis: calc((100% + var(--grid-indent)) / 3 - var(--grid-indent));
-  margin-right: var(--grid-indent);
-}
-.work__item:nth-child(3n) {
-  margin-right: 0;
-}
+  .work {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .work__item {
+    position: relative;
+    -ms-flex-preferred-size: calc((100% + var(--grid-indent)) / 3 - var(--grid-indent));
+        flex-basis: calc((100% + var(--grid-indent)) / 3 - var(--grid-indent));
+    margin-right: var(--grid-indent);
+  }
+  .work__item:nth-child(3n) {
+    margin-right: 0;
+  }
 
-.work__text {
-  position: absolute;
-  width: 100%;
-  height: 70px;
-  bottom: 0;
-  left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.142;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #fff;
-  background-color: rgba(47, 48, 58, 0.8);
+  .work__text {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.142;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
 }
-
 /* - - - раздел "наша команда" - - - */
 .team__section {
   background-color: #f5f4fa;
@@ -733,15 +738,24 @@ button {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: -15px;
 }
 .team__item {
-  -ms-flex-preferred-size: calc((100% + var(--grid-indent)) / 4 - var(--grid-indent));
-      flex-basis: calc((100% + var(--grid-indent)) / 4 - var(--grid-indent));
-  margin-right: var(--grid-indent);
   background-color: #fff;
 }
-.team__item:nth-child(4n) {
-  margin-right: 0;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team__item {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+    margin: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__item {
+    width: calc((100% - 4 * 30px) / 4);
+    margin: 15px;
+    margin: 15px;
+  }
 }
 
 .team__member {

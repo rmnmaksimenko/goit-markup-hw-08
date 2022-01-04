@@ -6,13 +6,20 @@
 .team {
   display: flex;
   flex-wrap: wrap;
-
+  margin: -15px;
   &__item {
-    flex-basis: calc((100% + var(--grid-indent)) / 4 - var(--grid-indent));
-    margin-right: var(--grid-indent);
     background-color: $color-background-main;
-    &:nth-child(4n) {
-      margin-right: 0;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &__item {
+      @include width__function(2);
+      margin: 15px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &__item {
+      @include width__function(4);
+      margin: 15px;
     }
   }
 }
