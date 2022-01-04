@@ -1,0 +1,51 @@
+// соцсети
+@mixin soc-container($color-fill, $color-back) {
+  &__link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    fill: $color-fill;
+    background-color: $color-back;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+
+    &:hover,
+    &:focus {
+      fill: $color-accent-text;
+      background-color: $color-accent;
+    }
+  }
+  // отступы между ссылками
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+// синяя кнопка, использующаяся во всём проекте
+@mixin main-button($pad-left, $pad-right) {
+  padding-left: $pad-left;
+  padding-right: $pad-right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border-style: none;
+  color: $color-accent-text;
+  background-color: $color-accent;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}

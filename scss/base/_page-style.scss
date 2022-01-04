@@ -1,0 +1,108 @@
+/* - - - - - - - главный стиль документа - - - - - - - */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: $color-background-main;
+  color: $color-primary;
+}
+
+/* контур */
+
+* {
+  /* outline: 2px solid tomato; */
+}
+
+h1,
+h2,
+h3,
+ul,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.title--hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* размер страницы */
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* общий стиль секций */
+
+.section {
+  padding: 94px 0;
+}
+
+/* - - - - - - - заголовки - - - - - - - */
+
+/* главный заголовок */
+
+.main-title {
+  color: $color-accent-text;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.363;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 0%;
+  margin-bottom: 0;
+}
+
+/* стиль вторых заголовков */
+
+.title--second {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.167;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+  color: $color-title;
+}
+
+/* подсветка ссылок в документе */
+
+.link--backlight {
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+}
+
+button {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

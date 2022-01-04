@@ -1,0 +1,45 @@
+/* - - - раздел "зачем выбирать нас" - - - */
+
+.why-us__icon-container {
+  display: flex;
+  margin-bottom: 30px;
+  background-color: $color-background-third;
+  height: 120px;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-us__icon {
+  width: 70px;
+  height: 70px;
+  background-position: center;
+}
+
+.why-us {
+  display: flex;
+
+  &__item {
+    flex-basis: calc((100% + var(--grid-indent)) / 4 - var(--grid-indent));
+    margin-right: var(--grid-indent);
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #212121;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+  }
+}

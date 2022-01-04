@@ -1,0 +1,133 @@
+/* - - - контакты (футер) - - - */
+
+.footer {
+  background-color: $color-background-second;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer__logo--margin {
+  margin-right: 0;
+}
+/* стиль контактов */
+
+.footer-contacts__container {
+  flex-grow: 1;
+}
+
+// адреса студии
+.address {
+  margin-top: 20px;
+
+  &__list {
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+  }
+
+  /* стиль ссылок в контактах */
+  &__link {
+    &--map {
+      font-style: normal;
+      color: $color-accent-text;
+    }
+    &--mail,
+    &--phone {
+      font-style: normal;
+      color: $color-transparent;
+    }
+  }
+
+  // отступы между ссылками
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+/* заголовки в футере */
+
+.footer__title {
+  color: $color-accent-text;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* стиль раздела соцсетей в футере */
+
+.footer-social-network__container {
+  margin-left: 70px;
+}
+
+.footer--flex {
+  align-items: baseline;
+  display: flex;
+}
+
+.footer-social-network {
+  display: flex;
+
+  @include soc-container($color-accent-text, $color-social-network-footer-transparent);
+}
+
+/* стиль раздела с подпиской на рассылку */
+
+.footer-spam__container {
+  margin-left: 93px;
+}
+
+.footer-spam__form {
+  display: flex;
+  align-items: flex-end;
+}
+
+.footer-spam__label {
+  margin-right: 12px;
+}
+
+// поле ввода почты
+
+.footer-spam__input {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: $color-background-second;
+  color: $color-accent-text;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &::placeholder {
+    background-color: inherit;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &:focus {
+    border: 1px solid $color-accent;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    outline: 0px;
+  }
+}
+
+// кнопка подтверждения рассылки
+
+.footer-spam__submit {
+  display: flex;
+  @include main-button(29px, 28px);
+
+  &-text {
+    display: flex;
+    margin-right: 10px;
+  }
+
+  &-icon {
+    display: flex;
+    align-self: center;
+    width: 24px;
+    height: 24px;
+    fill: $color-accent-text;
+  }
+}

@@ -1,0 +1,265 @@
+/*  - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - Модальное окно - - - - - - - */
+/*  - - - - - - - - - - - - - - - - - - - - - */
+
+/* окно на заднем фоне */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* состояние, при котором модалка неактивна */
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+/* модальное окно */
+.modal {
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  width: 528px;
+  min-height: 581px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+
+  // анимация при открытии / закрытии модалки
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+/* кнопка закрытия модалки */
+
+.modal__close {
+  &-button {
+    position: absolute;
+
+    top: 8px;
+    right: 8px;
+    background-color: $color-background-main;
+    cursor: pointer;
+    border: 0px;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    fill: $color-secondary;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    // наведение на кнопку
+    &:hover,
+    &:focus {
+      fill: $color-accent;
+    }
+  }
+
+  // иконка внутри кнопки
+  &-icon {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* заголовок в модалке */
+
+.modal__title {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: $color-secondary;
+}
+
+/* - - - - - - - Форма - - - - - - - */
+
+// общие стили окон ввода в форме
+
+.form-input--placeholder {
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form {
+  /* отступы формы */
+  &__container {
+    margin-top: 12px;
+  }
+
+  /* расположение элементов в форме */
+  &__label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  // отступ после поля комментария
+  &__textarea--margin {
+    margin-bottom: 20px;
+  }
+
+  /* стиль текста метки */
+  &__text {
+    font-size: 12px;
+    line-height: 1.166;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+  }
+
+  /* стиль окон ввода */
+
+  &__input {
+    @extend .form-input--placeholder;
+    height: 40px;
+    padding-left: 42px;
+    padding-right: 12px;
+  }
+
+  // стиль окна комментария
+
+  &__textarea {
+    @extend .form-input--placeholder;
+    resize: none;
+    height: 120px;
+    padding: 12px 16px;
+    // плейсхолдер в окне комментария
+    &::placeholder {
+      color: rgba(117, 117, 117, 0.5);
+    }
+  }
+
+  /* стиль окна ввода при фокусе */
+
+  &__input:focus,
+  &__textarea:focus {
+    border: 1px solid $color-accent;
+    outline: 0px;
+  }
+
+  // иконка в окне ввода
+  &__icon {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 15px;
+    bottom: 11px;
+    fill: $color-title;
+
+    // анимация иконки
+    .form__label & {
+      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    // цвет иконки при выборе поля
+    .form__label:focus-within > & {
+      fill: $color-accent;
+    }
+  }
+}
+
+/* - - - стиль чекбокса - - - */
+
+/* стиль строки с чекбоксом */
+
+.checkbox__label {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
+/* скрытый стандартный чекбокс */
+
+.checkbox__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0px;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* кастомный чекбок */
+
+.checkbox__icon {
+  /* кастомный чекбокс в нечекнутом состоянии */
+  display: flex;
+  width: 12px;
+  height: 11px;
+  box-shadow: 0 0 0 2px $color-title;
+  border-radius: 2px;
+  background-color: $color-background-main;
+  margin-right: 7px;
+
+  /* чекнутый чекбокс */
+  .checkbox__input:checked + & {
+    border-radius: 2px;
+    box-shadow: 0 0 0 2px $color-accent;
+    background-image: url(../icons-form/icon-check.svg);
+    background-position: center;
+    background-size: contain;
+    background-origin: border-box;
+    background-color: $color-accent;
+  }
+
+  // обводка нечекнутого чекбокса при фокусе
+  .checkbox__input:not(:checked):focus + & {
+    box-shadow: 0 0 0 2px $color-title, 0 0 0 4px $color-accent;
+  }
+
+  // обводка чекнутого чекбокса при фокусе
+  .checkbox__input:checked:focus + & {
+    box-shadow: 0 0 0 2px $color-accent, 0 0 0 4px $color-title;
+  }
+}
+
+/* оформление ссылки договора */
+
+.checkbox__link {
+  text-decoration: underline;
+  color: $color-accent;
+}
+
+/* кнопка отправки формы */
+
+.form__submit {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  @include main-button(55px, 55px);
+}

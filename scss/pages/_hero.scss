@@ -1,0 +1,21 @@
+/* - - - раздел "заказать услугу" - - - */
+
+.hero__section {
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/hero-img.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+/* кнопка "заказать услугу" */
+
+.hero__button {
+  margin-top: 30px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  @include main-button(32px, 32px);
+}

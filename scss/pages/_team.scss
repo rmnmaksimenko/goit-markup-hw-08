@@ -1,0 +1,51 @@
+/* - - - раздел "наша команда" - - - */
+.team__section {
+  background-color: $color-background-third;
+}
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex-basis: calc((100% + var(--grid-indent)) / 4 - var(--grid-indent));
+    margin-right: var(--grid-indent);
+    background-color: $color-background-main;
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.team__member {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &-name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: $color-title;
+  }
+
+  &-post {
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+}
+
+/* контейнер соцсетей */
+
+.social-network {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+
+  @include soc-container($color-social-network-main, $color-background-main);
+}

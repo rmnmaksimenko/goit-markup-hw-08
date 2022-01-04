@@ -1,0 +1,43 @@
+/* - - - наши клиенты - - - */
+
+.customers {
+  display: flex;
+  flex-wrap: wrap;
+
+  // отступы между блоками
+  &__item {
+    flex-basis: calc((100% + var(--grid-indent)) / 6 - var(--grid-indent));
+    margin-right: var(--grid-indent);
+    background-color: $color-background-main;
+    color: #000;
+    &:nth-child(6n) {
+      margin-right: 0;
+    }
+  }
+
+  // контейнеры логотипов компаний со ссылками
+  &__link {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    fill: $color-social-network-main;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+
+    // подсветка при наведении
+    &:hover,
+    &:focus {
+      fill: $color-accent;
+      border-color: $color-accent;
+    }
+  }
+
+  // логотипы компаний
+  &__icon {
+    width: 106px;
+    height: 60px;
+  }
+}
