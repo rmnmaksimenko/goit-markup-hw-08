@@ -3,22 +3,27 @@
 .customers {
   display: flex;
   flex-wrap: wrap;
-
-  // отступы между блоками
+  margin: -15px;
   &__item {
-    flex-basis: calc((100% + var(--grid-indent)) / 6 - var(--grid-indent));
-    margin-right: var(--grid-indent);
     background-color: $color-background-main;
     color: #000;
-    &:nth-child(6n) {
-      margin-right: 0;
+    @include width__function(2);
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &__item {
+      @include width__function(3);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &__item {
+      @include width__function(6);
     }
   }
 
   // контейнеры логотипов компаний со ссылками
   &__link {
     display: flex;
-    width: 170px;
+    // width: 170px;
     height: 92px;
     fill: $color-social-network-main;
     border-radius: 50%;

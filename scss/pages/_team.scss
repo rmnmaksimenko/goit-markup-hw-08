@@ -12,12 +12,12 @@
     border-radius: 0px 0px 4px 4px;
     margin-left: auto;
     margin-right: auto;
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
   }
   @media screen and (max-width: 767px) {
     max-width: calc(480px - 30px);
+    &__item:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
   @media screen and (min-width: 768px) {
     margin: -15px;
