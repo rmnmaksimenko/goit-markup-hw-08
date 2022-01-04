@@ -520,13 +520,16 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (min-width: 1200px) {
   .footer-spam__form {
@@ -541,7 +544,7 @@ button {
 }
 
 .footer-spam__input {
-  width: 358px;
+  width: 450px;
   height: 50px;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -551,6 +554,11 @@ button {
   -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   -o-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .footer-spam__input {
+    width: 358px;
+  }
 }
 .footer-spam__input::-webkit-input-placeholder {
   background-color: inherit;
