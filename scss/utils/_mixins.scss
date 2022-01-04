@@ -26,6 +26,15 @@
   }
 }
 
+@mixin flex-basis__function($column) {
+  flex-basis: calc((100% + var(--grid-indent)) / $column - var(--grid-indent));
+  margin-right: var(--grid-indent);
+
+  &:nth-child(#{$column}n) {
+    margin-right: 0;
+  }
+}
+
 // синяя кнопка, использующаяся во всём проекте
 @mixin main-button($pad-left, $pad-right) {
   padding-left: $pad-left;

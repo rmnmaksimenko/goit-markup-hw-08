@@ -200,11 +200,20 @@ img {
 
 /* размер страницы */
 .container {
-  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 /* общий стиль секций */
@@ -623,18 +632,31 @@ button {
   background-position: center;
 }
 
-.why-us {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .why-us {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
+  .why-us__item {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
 }
-.why-us__item {
-  -ms-flex-preferred-size: calc((100% + var(--grid-indent)) / 4 - var(--grid-indent));
-      flex-basis: calc((100% + var(--grid-indent)) / 4 - var(--grid-indent));
-  margin-right: var(--grid-indent);
-}
-.why-us__item:nth-child(4n) {
-  margin-right: 0;
+@media screen and (min-width: 1200px) {
+  .why-us {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: -15px;
+  }
+  .why-us__item {
+    width: calc((100% - 4 * 30px) / 4);
+    margin: 15px;
+  }
 }
 .why-us__title {
   font-size: 14px;

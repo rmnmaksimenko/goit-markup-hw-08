@@ -1,6 +1,8 @@
 /* - - - раздел "зачем выбирать нас" - - - */
 
 .why-us__icon-container {
+  // @media screen and (min-width: 1200px) {
+  // }
   display: flex;
   margin-bottom: 30px;
   background-color: $color-background-third;
@@ -17,14 +19,23 @@
 }
 
 .why-us {
-  display: flex;
-
-  &__item {
-    flex-basis: calc((100% + var(--grid-indent)) / 4 - var(--grid-indent));
-    margin-right: var(--grid-indent);
-
-    &:nth-child(4n) {
-      margin-right: 0;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+    // align-items: center;
+    &__item {
+      width: calc((100% - 2 * 30px) / 2);
+      margin: 15px;
+      // @include flex-basis__function(2);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin: -15px;
+    &__item {
+      width: calc((100% - 4 * 30px) / 4);
+      margin: 15px;
     }
   }
 
