@@ -7,17 +7,32 @@
 }
 
 .footer__logo--margin {
-  margin-right: 0;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 /* стиль контактов */
 
 .footer-contacts__container {
-  flex-grow: 1;
+  @media screen and (min-width: 1200px) {
+    flex-grow: 1;
+  }
 }
 
 // адреса студии
 .address {
   margin-top: 20px;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    text-align: initial;
+  }
 
   &__list {
     font-size: 14px;
@@ -70,10 +85,27 @@
   }
 }
 
+.footer--first-row {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 100%;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
 .footer--flex {
   display: flex;
   align-items: center;
   flex-direction: column;
+  // @media screen and (min-width: 768px) and (max-width: 1199px) {
+  //   flex-direction: row;
+  //   align-items: baseline;
+  // }
   @media screen and (min-width: 1200px) {
     flex-direction: row;
     align-items: baseline;
@@ -103,20 +135,27 @@
   width: 450px;
   margin-left: auto;
   margin-right: auto;
+  // @media screen and (min-width: 768px) and (max-width: 1199px) {
+  //   width: initial;
+  //   align-items: flex-end;
+  //   flex-direction: row;
+  // }
   @media screen and (min-width: 1200px) {
+    width: initial;
     align-items: flex-end;
     flex-direction: row;
   }
 }
 
 .footer-spam__label {
+  width: 100%;
 }
 
 // поле ввода почты
 
 .footer-spam__input {
-  // max-width: 100%;
-  width: 450px;
+  width: 100%;
+  align-items: center;
   @media screen and (min-width: 1200px) {
     width: 358px;
   }
