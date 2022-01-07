@@ -77,15 +77,18 @@
   letter-spacing: 0.02em;
 
   // подчеркивание текущей страницы
-  &--current::after {
-    content: '';
-    position: absolute;
-    height: 4px;
-    width: 100%;
-    right: 0;
-    background-color: $color-accent;
-    bottom: -32px;
-    border-radius: 2px;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &--current {
+    color: $color-accent;
+    &::after {
+      content: '';
+      position: absolute;
+      height: 4px;
+      width: 100%;
+      right: 0;
+      background-color: $color-accent;
+      bottom: -32px;
+      border-radius: 2px;
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
   }
 }

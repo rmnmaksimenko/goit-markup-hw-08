@@ -390,6 +390,9 @@ button {
   line-height: 1.142;
   letter-spacing: 0.02em;
 }
+.nav__link--current {
+  color: #2196f3;
+}
 .nav__link--current::after {
   content: "";
   position: absolute;
