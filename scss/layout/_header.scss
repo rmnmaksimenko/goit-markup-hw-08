@@ -25,6 +25,17 @@
   display: flex;
   margin-left: auto;
   align-self: center;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-flow: column;
+    &__item:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
 
   &__link {
     align-items: center;
@@ -39,10 +50,6 @@
   &__icon {
     margin-right: 10px;
     fill: currentColor;
-  }
-
-  &__item:not(:last-child) {
-    margin-right: 50px;
   }
 }
 

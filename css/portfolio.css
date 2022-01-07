@@ -278,7 +278,12 @@ button {
   line-height: 1.2;
   letter-spacing: 0.03em;
   color: #2196f3;
-  margin-right: 94px;
+  margin-right: 88px;
+}
+@media screen and (min-width: 1200px) {
+  .logo__link {
+    margin-right: 93px;
+  }
 }
 .logo__link--dark {
   color: #000;
@@ -325,6 +330,22 @@ button {
   -ms-flex-item-align: center;
       align-self: center;
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header-contaсts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  .header-contaсts__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-contaсts__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
 .header-contaсts__link {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -341,9 +362,6 @@ button {
 .header-contaсts__icon {
   margin-right: 10px;
   fill: currentColor;
-}
-.header-contaсts__item:not(:last-child) {
-  margin-right: 50px;
 }
 
 /* навигационные ссылки */

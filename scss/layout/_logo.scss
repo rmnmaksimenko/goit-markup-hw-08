@@ -7,7 +7,10 @@
   line-height: 1.2;
   letter-spacing: 0.03em;
   color: $color-accent;
-  margin-right: 94px;
+  margin-right: 88px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 
   &--dark {
     color: $color-secondary;
