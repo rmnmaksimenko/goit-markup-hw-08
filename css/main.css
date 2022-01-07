@@ -204,7 +204,12 @@ img {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  width: 480px;
+  width: 100%;
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .container {
+    width: 480px;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .container {
@@ -367,7 +372,7 @@ button {
   line-height: 1.142;
   letter-spacing: 0.02em;
 }
-.nav__link--underline::after {
+.nav__link--current::after {
   content: "";
   position: absolute;
   height: 4px;
@@ -559,6 +564,8 @@ button {
 /* стиль раздела с подпиской на рассылку */
 .footer-spam__container {
   margin-top: 60px;
+  max-width: 450px;
+  width: 100%;
 }
 @media screen and (min-width: 1200px) {
   .footer-spam__container {
@@ -578,7 +585,8 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 450px;
+  max-width: 450px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -596,10 +604,12 @@ button {
 }
 
 .footer-spam__label {
+  max-width: 450px;
   width: 100%;
 }
 
 .footer-spam__input {
+  max-width: 450px;
   width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;

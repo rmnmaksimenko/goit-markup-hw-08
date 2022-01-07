@@ -70,7 +70,7 @@
   letter-spacing: 0.02em;
 
   // подчеркивание текущей страницы
-  &--underline::after {
+  &--current::after {
     content: '';
     position: absolute;
     height: 4px;
