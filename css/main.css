@@ -1182,6 +1182,7 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
