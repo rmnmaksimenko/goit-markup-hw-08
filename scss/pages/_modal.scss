@@ -28,6 +28,7 @@
 /* модальное окно */
 .modal {
   padding: 40px;
+  position: relative;
   @media screen and (min-width: 558px) {
     position: absolute;
     top: 50%;
