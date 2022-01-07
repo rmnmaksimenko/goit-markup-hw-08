@@ -338,6 +338,11 @@ button {
   -o-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 768px) {
+  .menu__button {
+    display: none;
+  }
+}
 .menu__button:hover, .menu__button:focus {
   fill: #2196f3;
 }
@@ -1303,10 +1308,16 @@ button {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.167;
   letter-spacing: 0.03em;
   color: #757575;
+}
+@media screen and (min-width: 1200px) {
+  .checkbox__label {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 /* скрытый стандартный чекбокс */
