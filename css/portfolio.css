@@ -154,6 +154,10 @@ body {
   color: #757575;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 /* контур */
 * {
   /* outline: 2px solid tomato; */

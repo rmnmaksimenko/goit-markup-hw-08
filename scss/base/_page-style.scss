@@ -6,6 +6,10 @@ body {
   color: $color-primary;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 /* контур */
 
 * {
