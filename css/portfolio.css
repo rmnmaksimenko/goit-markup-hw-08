@@ -294,6 +294,7 @@ button {
 
 /* - - - Шапка - - - */
 .header {
+  position: relative;
   margin-bottom: 0;
   height: 80px;
   display: -webkit-box;
@@ -319,6 +320,47 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.menu__button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu__button:hover, .menu__button:focus {
+  fill: #2196f3;
+}
+.menu__button .icon--cross {
+  display: none;
+}
+.menu__button.is-open .icon--cross {
+  display: block;
+}
+.menu__button.is-open .icon--menu {
+  display: none;
+}
+
+.menu__container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background-color: palegoldenrod;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+.menu__container.is-open {
+  display: block;
 }
 
 /* контакты в шапке */
