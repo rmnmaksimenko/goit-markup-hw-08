@@ -237,19 +237,6 @@ img {
 }
 
 /* - - - - - - - заголовки - - - - - - - */
-/* главный заголовок */
-.main-title {
-  color: #fff;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.363;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-top: 0%;
-  margin-bottom: 0;
-}
-
 /* стиль вторых заголовков */
 .title--second {
   font-weight: 700;
@@ -899,8 +886,33 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+}
+@media screen and (min-width: 1200px) {
+  .hero__section {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
+
+/* главный заголовок */
+.hero__title {
+  color: #fff;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.615;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 0%;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.363;
+  }
 }
 
 /* кнопка "заказать услугу" */
