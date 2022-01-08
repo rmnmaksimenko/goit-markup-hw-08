@@ -204,3 +204,31 @@
     }
   }
 }
+
+// соцсети
+.header-social-network {
+  display: flex;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.header-social-network__item {
+  &:not(:last-child) {
+    position: relative;
+    margin-right: 20px;
+    &::after {
+      content: '';
+      right: -10px;
+      position: absolute;
+      height: 22px;
+      border: 1px solid rgba(33, 33, 33, 0.2);
+    }
+  }
+}
+
+.header-social-network__link {
+  font-size: 18px;
+  line-height: 1.222;
+  color: $color-accent;
+}
