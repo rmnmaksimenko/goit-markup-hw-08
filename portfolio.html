@@ -21,18 +21,27 @@
         <nav class="nav">
           <!-- логотип / главная страница-->
           <a href="./index.html" class="logo__link">Web<span class="logo__link--dark">Studio</span></a>
+          <button type="button" class="menu__button" aria-expanded="false" aria-controls="menu__container" data-menu-button>
+            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+              <use class="icon--cross" href="./images/close.svg#close"></use>
+              <use class="icon--menu" href="./icons-form/icons.svg#menu"></use>
+            </svg>
+          </button>
 
+          <div class="menu__container" id="menu__container" data-menu></div>
           <!-- навагация по сайту -->
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="./index.html" class="nav__link link--backlight"> Студия</a>
+              <a href="./index.html" class="nav__link link--backlight nav__link--current"> Студия</a>
             </li>
 
             <li class="nav__item">
-              <a href="./portfolio.html" class="nav__link link--backlight nav__link--current">Портфолио</a>
+              <a href="./portfolio.html" class="nav__link link--backlight">Портфолио</a>
             </li>
 
-            <li class="nav__item"><a href="#" class="nav__link link--backlight">Контакты</a></li>
+            <li class="nav__item">
+              <a href="#" class="nav__link link--backlight">Контакты</a>
+            </li>
           </ul>
         </nav>
 
@@ -46,7 +55,6 @@
               info@devstudio.com</a
             >
           </li>
-
           <li class="header-contaсts__item">
             <a href="tel:+380961111111" class="header-contaсts__link link--backlight"
               ><svg class="header-contaсts__icon" width="10" height="16">
