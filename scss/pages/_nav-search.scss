@@ -7,9 +7,21 @@
 /* список кнопок */
 .nav-search {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 50px;
+  flex-wrap: wrap;
+  padding-bottom: 25px;
+  &__item {
+    margin-bottom: 15px;
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-bottom: 50px;
+
+    &__item {
+      margin-bottom: 0;
+    }
+  }
 
   // отступы между кнопками
   &__item:not(:last-child) {

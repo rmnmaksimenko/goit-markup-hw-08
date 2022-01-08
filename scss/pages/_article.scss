@@ -8,20 +8,20 @@
 .article {
   display: flex;
   flex-wrap: wrap;
-
+  margin: -15px;
   /* расположение карточек */
   &__item {
-    flex-basis: calc((100% + var(--grid-indent)) / 3 - var(--grid-indent));
-    margin-right: var(--grid-indent);
-
-    margin-bottom: 30px;
-
-    &:nth-child(3n) {
-      margin-right: 0;
+    @include width__function(1);
+    max-width: 370px;
+    @media screen and (max-width: 767px) {
+      margin-left: auto;
+      margin-right: auto;
     }
-
-    &:nth-last-child(-n + 3) {
-      margin-bottom: 0;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      @include width__function(2);
+    }
+    @media screen and (min-width: 1200px) {
+      @include width__function(3);
     }
   }
 
