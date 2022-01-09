@@ -57,22 +57,24 @@
 
 .menu__container {
   @media screen and (max-width: 767px) {
-    display: none;
+    display: block;
+    top: calc(100% - 80px);
     max-width: 480px;
     position: absolute;
-    top: calc(100% - 80px);
+    transform: translate(-50%, -100%);
     left: 50%;
     width: 100%;
-    transform: translate(-50%);
     background-color: $color-background-main;
     padding: 48px 40px;
     text-align: center;
     font-size: 20px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &.is-open {
       display: block;
       z-index: 10;
+      transform: translate(-50%, 0%);
     }
   }
   @media screen and (min-width: 768px) {

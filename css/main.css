@@ -348,25 +348,33 @@ button {
 
 @media screen and (max-width: 767px) {
   .menu__container {
-    display: none;
+    display: block;
+    top: calc(100% - 80px);
     max-width: 480px;
     position: absolute;
-    top: calc(100% - 80px);
+    -webkit-transform: translate(-50%, -100%);
+        -ms-transform: translate(-50%, -100%);
+            transform: translate(-50%, -100%);
     left: 50%;
     width: 100%;
-    -webkit-transform: translate(-50%);
-        -ms-transform: translate(-50%);
-            transform: translate(-50%);
     background-color: #fff;
     padding: 48px 40px;
     text-align: center;
     font-size: 20px;
     -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    -webkit-transition: -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .menu__container.is-open {
     display: block;
     z-index: 10;
+    -webkit-transform: translate(-50%, 0%);
+        -ms-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
   }
 }
 @media screen and (min-width: 768px) {
