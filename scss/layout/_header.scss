@@ -10,7 +10,7 @@
   border-bottom: 1px solid #ececec;
 }
 
-.container-header {
+.container__header {
   display: flex;
 }
 
@@ -87,17 +87,6 @@
 
 .header-contacts {
   display: flex;
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    flex-flow: column;
-    &__item:not(:last-child) {
-      margin-bottom: 10px;
-    }
-  }
-  @media screen and (min-width: 1200px) {
-    &__item:not(:last-child) {
-      margin-right: 50px;
-    }
-  }
   @media screen and (max-width: 767px) {
     flex-direction: column-reverse;
     max-width: 480px;
@@ -135,14 +124,26 @@
       letter-spacing: 0.02em;
     }
   }
-  &__icon {
-    @media screen and (max-width: 767px) {
-      display: none;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-flow: column;
+    &__item:not(:last-child) {
+      margin-bottom: 10px;
     }
-    @media screen and (min-width: 768px) {
-      margin-right: 10px;
-      fill: currentColor;
+  }
+  @media screen and (min-width: 1200px) {
+    &__item:not(:last-child) {
+      margin-right: 50px;
     }
+  }
+}
+
+.header-contacts__icon {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    margin-right: 10px;
+    fill: currentColor;
   }
 }
 
@@ -189,7 +190,7 @@
   }
   letter-spacing: 0.02em;
 
-  // подчеркивание текущей страницы
+  // подчеркивание и подсветка текущей страницы
   @media screen and (min-width: 768px) {
     &--current {
       color: $color-accent;

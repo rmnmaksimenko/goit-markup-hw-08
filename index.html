@@ -16,11 +16,11 @@
   <body>
     <!-- шапка -->
     <header class="header">
-      <div class="container container-header">
+      <div class="container container__header">
         <!-- навагация -->
         <nav class="nav">
           <!-- логотип / главная страница-->
-          <a href="./index.html" class="logo__link">Web<span class="logo__link--dark">Studio</span></a>
+          <a href="./index.html" class="logo">Web<span class="logo--dark">Studio</span></a>
           <button type="button" class="menu__button" aria-expanded="false" aria-controls="menu__container" data-menu-button>
             <svg width="40" height="40" aria-label="Переключатель мобильного меню">
               <use class="icon--cross" href="./images/close.svg#close"></use>
@@ -88,7 +88,7 @@
     </header>
     <main>
       <!-- секция "герой" -->
-      <section class="hero__section">
+      <section class="hero">
         <h1 class="hero__title">
           Эффективные решения <br />
           для вашего бизнеса
@@ -151,7 +151,7 @@
       <section class="work__section section">
         <div class="container">
           <!-- заголовок -->
-          <h2 class="title--second">Чем мы занимаемся</h2>
+          <h2 class="section__title">Чем мы занимаемся</h2>
 
           <!-- фотосписок наших технологий -->
           <ul class="work">
@@ -188,7 +188,7 @@
       <!-- раздел кто мы -->
       <section class="team__section section">
         <div class="container">
-          <h2 class="title--second">Наша команда</h2>
+          <h2 class="section__title">Наша команда</h2>
 
           <!-- карточки с фотографиями нашей команды и ссылками на соцсети для связи с ней -->
           <ul class="team">
@@ -198,9 +198,9 @@
                 <source srcset="./images/jpeg/small/team-1.jpg 1x, ./images/jpeg/big/team-1.jpg 2x" type="image/jpg" />
                 <img src="./images/jpeg/small/team-1.jpg" alt="Наш сотрудник 1" width="100%" />
               </picture>
-              <div class="team__member">
-                <h3 class="team__member-name">Игорь Демьяненко</h3>
-                <p class="team__member-post">Product Designer</p>
+              <div class="team__box">
+                <h3 class="team__title">Игорь Демьяненко</h3>
+                <p class="team__text">Product Designer</p>
                 <ul class="social-network">
                   <li class="social-network__item">
                     <a href="http://www.instagram.com/" class="social-network__link">
@@ -242,9 +242,9 @@
                 <source srcset="./images/jpeg/small/team-2.jpg 1x, ./images/jpeg/big/team-2.jpg 2x" type="image/jpg" />
                 <img src="./images/jpeg/small/team-2.jpg" alt="Наш сотрудник 2" width="100%" />
               </picture>
-              <div class="team__member">
-                <h3 class="team__member-name">Ольга Репина</h3>
-                <p class="team__member-post">Frontend Developer</p>
+              <div class="team__box">
+                <h3 class="team__title">Ольга Репина</h3>
+                <p class="team__text">Frontend Developer</p>
                 <ul class="social-network">
                   <li class="social-network__item">
                     <a href="http://www.instagram.com/" class="social-network__link">
@@ -286,9 +286,9 @@
                 <source srcset="./images/jpeg/small/team-3.jpg 1x, ./images/jpeg/big/team-3.jpg 2x" type="image/jpg" />
                 <img src="./images/jpeg/small/team-3.jpg" alt="Наш сотрудник 3" width="100%" />
               </picture>
-              <div class="team__member">
-                <h3 class="team__member-name">Николай Тарасов</h3>
-                <p class="team__member-post">Marketing</p>
+              <div class="team__box">
+                <h3 class="team__title">Николай Тарасов</h3>
+                <p class="team__text">Marketing</p>
                 <ul class="social-network">
                   <li class="social-network__item">
                     <a href="http://www.instagram.com/" class="social-network__link">
@@ -330,9 +330,9 @@
                 <source srcset="./images/jpeg/small/team-4.jpg 1x, ./images/jpeg/big/team-4.jpg 2x" type="image/jpg" />
                 <img src="./images/jpeg/small/team-4.jpg" alt="Наш сотрудник 4" width="100%" />
               </picture>
-              <div class="team__member">
-                <h3 class="team__member-name">Михаил Ермаков</h3>
-                <p class="team__member-post">UI Designer</p>
+              <div class="team__box">
+                <h3 class="team__title">Михаил Ермаков</h3>
+                <p class="team__text">UI Designer</p>
                 <ul class="social-network">
                   <li class="social-network__item">
                     <a href="http://www.instagram.com/" class="social-network__link">
@@ -376,7 +376,7 @@
       <section class="section">
         <div class="container">
           <!-- заголовок -->
-          <h2 class="title--second">Постоянные клиенты</h2>
+          <h2 class="section__title">Постоянные клиенты</h2>
 
           <!-- логотипы компаний -->
           <ul class="customers">
@@ -439,7 +439,7 @@
           <!-- раздел контакты -->
           <div class="footer-contacts__container">
             <!-- лого -->
-            <a href="./index.html" class="logo__link footer__logo--margin">Web<span class="logo__link--light">Studio</span></a>
+            <a href="./index.html" class="logo footer__logo--margin">Web<span class="logo--light">Studio</span></a>
             <!-- контакты -->
             <address class="address">
               <ul class="address__list">

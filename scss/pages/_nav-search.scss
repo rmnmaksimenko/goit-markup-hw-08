@@ -9,47 +9,53 @@
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 25px;
-  &__item {
-    margin-bottom: 15px;
-  }
+
   @media screen and (min-width: 768px) {
     justify-content: center;
     flex-wrap: nowrap;
     align-items: center;
     padding-bottom: 50px;
-
-    &__item {
-      margin-bottom: 0;
-    }
   }
+}
 
+.nav-search__item {
+  margin-bottom: 15px;
   // отступы между кнопками
-  &__item:not(:last-child) {
+  &:not(:last-child) {
     margin-right: 8px;
   }
 
-  /* стиль кнопок */
-  &__button {
-    font-family: inherit;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.62;
-    text-align: center;
-    letter-spacing: 0.03em;
-    background-color: #f5f4fa;
-    border-style: none;
-    cursor: pointer;
-    background-color: $color-background-third;
-    color: $color-title;
-    padding: 6px 22px;
-    border-radius: 4px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
 
-    &:hover,
-    &:focus {
-      background-color: $color-accent;
-      color: $color-accent-text;
-      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-      border-radius: 4px;
-    }
+// отступы между кнопками
+&:not(:last-child) {
+  margin-right: 8px;
+}
+
+/* стиль кнопок */
+.nav-search__button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  background-color: #f5f4fa;
+  border-style: none;
+  cursor: pointer;
+  background-color: $color-background-third;
+  color: $color-title;
+  padding: 6px 22px;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+    color: $color-accent-text;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
   }
 }

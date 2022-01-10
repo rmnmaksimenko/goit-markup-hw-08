@@ -6,60 +6,64 @@
 .team {
   display: block;
   flex-wrap: wrap;
-  &__item {
-    background-color: $color-background-main;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+
   @media screen and (max-width: 767px) {
-    max-width: calc(480px - 30px);
-    &__item:not(:last-child) {
-      margin-bottom: 30px;
-    }
+    max-width: 100%;
   }
   @media screen and (min-width: 768px) {
     margin: -15px;
     display: flex;
     flex-wrap: wrap;
-    &__item {
-      margin: 15px;
-    }
-  }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    &__item {
-      @include width__function(2);
-    }
-  }
-  @media screen and (min-width: 1200px) {
-    &__item {
-      @include width__function(4);
-    }
   }
 }
 
-.team__member {
+.team__item {
+  background-color: $color-background-main;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    margin: 15px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include width__function(2);
+  }
+  @media screen and (min-width: 1200px) {
+    @include width__function(4);
+  }
+}
+
+.team__box {
   padding-top: 30px;
-  padding-bottom: 30px;
-
-  &-name {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
-    text-align: center;
-    color: $color-title;
+  padding-bottom: 24px;
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 30px;
   }
+}
 
-  &-post {
-    font-size: 16px;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 0;
-  }
+.team__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: $color-title;
+}
+
+.team__text {
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
 /* контейнер соцсетей */

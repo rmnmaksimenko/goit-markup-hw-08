@@ -1,4 +1,6 @@
 /* - - - раздел "чем мы занимаемся" - - - */
+
+// убрать раздел на маленьких устройствах
 @media screen and (max-width: 1199px) {
   .work__section {
     display: none;
@@ -13,15 +15,15 @@
   .work {
     display: flex;
     flex-wrap: wrap;
+  }
 
-    &__item {
-      position: relative;
-      flex-basis: calc((100% + var(--grid-indent)) / 3 - var(--grid-indent));
-      margin-right: var(--grid-indent);
+  .work__item {
+    position: relative;
+    flex-basis: calc((100% + var(--grid-indent)) / 3 - var(--grid-indent));
+    margin-right: var(--grid-indent);
 
-      &:nth-child(3n) {
-        margin-right: 0;
-      }
+    &:nth-child(3n) {
+      margin-right: 0;
     }
   }
 

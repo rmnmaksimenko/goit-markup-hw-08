@@ -5,13 +5,17 @@
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  // для устройств с разрешением ниже 480px (мобилки)
   width: 100%;
+  // от 480 до 767 пикселей (мобилки)
   @media screen and (min-width: 480px) and (max-width: 767px) {
     width: 480px;
   }
+  // от 768 до 1199 пикселей (планшеты)
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     width: 768px;
   }
+  // от 1200 пикселей (ноутбуки/пк)
   @media screen and (min-width: 1200px) {
     width: 1200px;
   }

@@ -66,10 +66,14 @@ img {
 
 /* стиль вторых заголовков */
 
-.title--second {
+.section__title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.167;
+  font-size: 28px;
+  line-height: 1.178;
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: 1.167;
+  }
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 50px;

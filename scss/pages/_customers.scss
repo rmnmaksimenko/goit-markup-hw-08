@@ -4,45 +4,41 @@
   display: flex;
   flex-wrap: wrap;
   margin: -15px;
-  &__item {
-    background-color: $color-background-main;
-    color: #000;
-    @include width__function(2);
-  }
+}
+.customers__item {
+  background-color: $color-background-main;
+  color: #000;
+  @include width__function(2);
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    &__item {
-      @include width__function(3);
-    }
+    @include width__function(3);
   }
   @media screen and (min-width: 1200px) {
-    &__item {
-      @include width__function(6);
-    }
+    @include width__function(6);
   }
+}
 
-  // контейнеры логотипов компаний со ссылками
-  &__link {
-    display: flex;
-    // width: 170px;
-    height: 92px;
-    fill: $color-social-network-main;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #afb1b8;
-    border-radius: 4px;
+// контейнеры логотипов компаний со ссылками
+.customers__link {
+  display: flex;
+  // width: 170px;
+  height: 92px;
+  fill: $color-social-network-main;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
 
-    // подсветка при наведении
-    &:hover,
-    &:focus {
-      fill: $color-accent;
-      border-color: $color-accent;
-    }
+  // подсветка при наведении
+  &:hover,
+  &:focus {
+    fill: $color-accent;
+    border-color: $color-accent;
   }
+}
 
-  // логотипы компаний
-  &__icon {
-    width: 106px;
-    height: 60px;
-  }
+// логотипы компаний
+.customers__icon {
+  width: 106px;
+  height: 60px;
 }
