@@ -30,11 +30,6 @@
   }
 }
 
-// отступы между кнопками
-&:not(:last-child) {
-  margin-right: 8px;
-}
-
 /* стиль кнопок */
 .nav-search__button {
   font-family: inherit;

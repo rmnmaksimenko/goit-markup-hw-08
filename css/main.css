@@ -1527,7 +1527,7 @@ button {
   border-radius: 2px;
   -webkit-box-shadow: 0 0 0 2px #2196f3;
           box-shadow: 0 0 0 2px #2196f3;
-  background-image: url(../icons-form/icon-check.svg);
+  background-image: url(../images/icon-check.svg);
   background-position: center;
   background-size: contain;
   background-origin: border-box;
@@ -1587,9 +1587,6 @@ button {
       flex-wrap: wrap;
   padding-bottom: 25px;
 }
-.nav-search__item {
-  margin-bottom: 15px;
-}
 @media screen and (min-width: 768px) {
   .nav-search {
     -webkit-box-pack: center;
@@ -1602,12 +1599,18 @@ button {
             align-items: center;
     padding-bottom: 50px;
   }
-  .nav-search__item {
-    margin-bottom: 0;
-  }
+}
+
+.nav-search__item {
+  margin-bottom: 15px;
 }
 .nav-search__item:not(:last-child) {
   margin-right: 8px;
+}
+@media screen and (min-width: 768px) {
+  .nav-search__item {
+    margin-bottom: 0;
+  }
 }
 
 /* стиль кнопок */
@@ -1646,9 +1649,9 @@ button {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: -15px;
-  /* расположение карточек */
-  /* анимированый фон с выезжающим текстом */
 }
+
+/* расположение карточек */
 .article__item {
   width: calc((100% - 1 * 30px) / 1);
   margin: 15px;
@@ -1672,6 +1675,7 @@ button {
     margin: 15px;
   }
 }
+
 .article__link {
   display: block;
   position: relative;
@@ -1691,9 +1695,12 @@ button {
       -ms-transform: translateX(0);
           transform: translateX(0);
 }
+
 .article__thumb {
   position: relative;
 }
+
+/* анимированый фон с выезжающим текстом */
 .article__overlay {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1727,10 +1734,12 @@ button {
   line-height: 1.556;
   letter-spacing: 0.03em;
 }
+
 .article__container {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
 }
+
 .article__title {
   font-size: 18px;
   font-weight: 700;
@@ -1738,6 +1747,7 @@ button {
   letter-spacing: 0.06em;
   color: #212121;
 }
+
 .article__text {
   font-size: 16px;
   line-height: 1.875;
