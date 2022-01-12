@@ -157,27 +157,27 @@
           <ul class="work">
             <li class="work__item">
               <picture>
-                <source srcset="./images/webp/small/box-1.webp 1x, ./images/webp/big/box-1.webp 2x" type="image/webp" />
-                <source srcset="./images/jpeg/small/box-1.jpg 1x, ./images/jpeg/big/box-1.jpg 2x" type="image/jpg" />
-                <img src="./images/jpeg/small/box-1.jpg" alt="Опытные специалисты" />
+                <source srcset="./images/desktop/webp/small/box-1.webp 1x, ./images/desktop/webp/big/box-1.webp 2x" type="image/webp" />
+                <source srcset="./images/desktop/jpeg/small/box-1.jpg 1x, ./images/desktop/jpeg/big/box-1.jpg 2x" type="image/jpg" />
+                <img src="./images/desktop/jpeg/small/box-1.jpg" alt="Опытные специалисты" />
               </picture>
               <p class="work__text">Десктопные приложения</p>
             </li>
 
             <li class="work__item">
               <picture>
-                <source srcset="./images/webp/small/box-2.webp 1x, ./images/webp/big/box-2.webp 2x" type="image/webp" />
-                <source srcset="./images/jpeg/small/box-2.jpg 1x, ./images/jpeg/big/box-2.jpg 2x" type="image/jpg" />
-                <img src="./images/jpeg/small/box-2.jpg" alt="Современный дизайн" />
+                <source srcset="./images/desktop/webp/small/box-2.webp 1x, ./images/desktop/webp/big/box-2.webp 2x" type="image/webp" />
+                <source srcset="./images/desktop/jpeg/small/box-2.jpg 1x, ./images/desktop/webp/big/box-2.jpg 2x" type="image/jpg" />
+                <img src="./images/desktop/jpeg/small/box-2.jpg" alt="Современный дизайн" />
               </picture>
               <p class="work__text">Мобильные приложения</p>
             </li>
 
             <li class="work__item">
               <picture>
-                <source srcset="./images/webp/small/box-3.webp 1x, ./images/webp/big/box-3.webp 2x" type="image/webp" />
-                <source srcset="./images/jpeg/small/box-3.jpg 1x, ./images/jpeg/big/box-3.jpg 2x" type="image/jpg" />
-                <img src="./images/jpeg/small/box-3.jpg" alt="Работа художников" />
+                <source srcset="./images/desktop/webp/small/box-3.webp 1x, ./images/desktop/webp/big/box-3.webp 2x" type="image/webp" />
+                <source srcset="./images/desktop/jpeg/small/box-3.jpg 1x, ./images/desktop/webp/big/box-3.jpg 2x" type="image/jpg" />
+                <img src="./images/desktop/jpeg/small/box-3.jpg" alt="Работа художников" />
               </picture>
               <p class="work__text">Дизайнерские решения</p>
             </li>
@@ -193,15 +193,30 @@
           <!-- карточки с фотографиями нашей команды и ссылками на соцсети для связи с ней -->
           <ul class="team">
             <li class="team__item">
-              <picture class="team__picture--mobile">
-                <source srcset="./images/webp/small/team-1.webp 1x, ./images/webp/big/team-1.webp 2x" type="image/webp" />
-                <source srcset="./images/jpeg/small/team-1.jpg 1x, ./images/jpeg/big/team-1.jpg 2x" type="image/jpg" />
-                <img src="./images/jpeg/small/team-1.jpg" alt="Наш сотрудник 1" />
-              </picture>
-              <picture class="team__picture--desktop">
-                <source srcset="./images/webp/small/team-1-desktop.webp 1x, ./images/webp/big/team-1-desktop.webp 2x" type="image/webp" />
-                <source srcset="./images/jpeg/small/team-1-desktop.jpg 1x, ./images/jpeg/big/team-1-desktop.jpg 2x" type="image/jpg" />
-                <img src="./images/jpeg/small/team-1.jpg" alt="Наш сотрудник 1" />
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/mobile/webp/small/team-1.webp 1x, ./images/mobile/webp/big/team-1.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/mobile/jpeg/small/team-1.jpg 1x, ./images/mobile/jpeg/big/team-1.jpg 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 1199px)"
+                  srcset="./images/tablet/webp/small/team-1.webp 1x, ./images/tablet/webp/big/team-1.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 1199px)"
+                  srcset="./images/tablet/jpeg/small/team-1.jpg 1x, ./images/tablet/jpeg/big/team-1.jpg 2x"
+                  type="image/jpg"
+                />
+                <source srcset="./images/desktop/webp/small/team-1.webp 1x, ./images/desktop/webp/big/team-1.webp 2x" type="image/webp" />
+                <source srcset="./images/desktop/jpeg/small/team-1.jpg 1x, ./images/desktop/jpeg/big/team-1.jpg 2x" type="image/jpg" />
+                <img src="./images/desktop/jpeg/small/team-1.jpg" alt="Наш сотрудник 1" />
               </picture>
               <div class="team__box">
                 <h3 class="team__title">Игорь Демьяненко</h3>
@@ -242,15 +257,30 @@
               </div>
             </li>
             <li class="team__item">
-              <picture class="team__picture--mobile">
-                <source srcset="./images/webp/small/team-2.webp 1x, ./images/webp/big/team-2.webp 2x" type="image/webp" />
-                <source srcset="./images/jpeg/small/team-2.jpg 1x, ./images/jpeg/big/team-2.jpg 2x" type="image/jpg" />
-                <img src="./images/jpeg/small/team-2.jpg" alt="Наш сотрудник 2" />
-              </picture>
-              <picture class="team__picture--desktop">
-                <source srcset="./images/webp/small/team-2-desktop.webp 1x, ./images/webp/big/team-2-desktop.webp 2x" type="image/webp" />
-                <source srcset="./images/jpeg/small/team-2-desktop.jpg 1x, ./images/jpeg/big/team-2-desktop.jpg 2x" type="image/jpg" />
-                <img src="./images/jpeg/small/team-2.jpg" alt="Наш сотрудник 2" />
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/mobile/webp/small/team-2.webp 1x, ./images/mobile/webp/big/team-2.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/mobile/jpeg/small/team-2.jpg 1x, ./images/mobile/jpeg/big/team-2.jpg 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 1199px)"
+                  srcset="./images/tablet/webp/small/team-2.webp 1x, ./images/tablet/webp/big/team-2.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 1199px)"
+                  srcset="./images/tablet/jpeg/small/team-2.jpg 1x, ./images/tablet/jpeg/big/team-2.jpg 2x"
+                  type="image/jpg"
+                />
+                <source srcset="./images/desktop/webp/small/team-2.webp 1x, ./images/desktop/webp/big/team-2.webp 2x" type="image/webp" />
+                <source srcset="./images/desktop/jpeg/small/team-2.jpg 1x, ./images/desktop/jpeg/big/team-2.jpg 2x" type="image/jpg" />
+                <img src="./images/desktop/jpeg/small/team-2.jpg" alt="Наш сотрудник 2" />
               </picture>
               <div class="team__box">
                 <h3 class="team__title">Ольга Репина</h3>
@@ -291,15 +321,30 @@
               </div>
             </li>
             <li class="team__item">
-              <picture class="team__picture--mobile">
-                <source srcset="./images/webp/small/team-3.webp 1x, ./images/webp/big/team-3.webp 2x" type="image/webp" />
-                <source srcset="./images/jpeg/small/team-3.jpg 1x, ./images/jpeg/big/team-3.jpg 2x" type="image/jpg" />
-                <img src="./images/jpeg/small/team-3.jpg" alt="Наш сотрудник 3" />
-              </picture>
-              <picture class="team__picture--desktop">
-                <source srcset="./images/webp/small/team-3-desktop.webp 1x, ./images/webp/big/team-3-desktop.webp 2x" type="image/webp" />
-                <source srcset="./images/jpeg/small/team-3-desktop.jpg 1x, ./images/jpeg/big/team-3-desktop.jpg 2x" type="image/jpg" />
-                <img src="./images/jpeg/small/team-3-desktop.jpg" alt="Наш сотрудник 3" />
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/mobile/webp/small/team-3.webp 1x, ./images/mobile/webp/big/team-3.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/mobile/jpeg/small/team-3.jpg 1x, ./images/mobile/jpeg/big/team-3.jpg 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 1199px)"
+                  srcset="./images/tablet/webp/small/team-3.webp 1x, ./images/tablet/webp/big/team-3.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 1199px)"
+                  srcset="./images/tablet/jpeg/small/team-3.jpg 1x, ./images/tablet/jpeg/big/team-3.jpg 2x"
+                  type="image/jpg"
+                />
+                <source srcset="./images/desktop/webp/small/team-3.webp 1x, ./images/desktop/webp/big/team-3.webp 2x" type="image/webp" />
+                <source srcset="./images/desktop/jpeg/small/team-3.jpg 1x, ./images/desktop/jpeg/big/team-3.jpg 2x" type="image/jpg" />
+                <img src="./images/desktop/jpeg/small/team-3.jpg" alt="Наш сотрудник 3" />
               </picture>
               <div class="team__box">
                 <h3 class="team__title">Николай Тарасов</h3>
@@ -340,15 +385,30 @@
               </div>
             </li>
             <li class="team__item">
-              <picture class="team__picture--mobile">
-                <source srcset="./images/webp/small/team-4.webp 1x, ./images/webp/big/team-4.webp 2x" type="image/webp" />
-                <source srcset="./images/jpeg/small/team-4.jpg 1x, ./images/jpeg/big/team-4.jpg 2x" type="image/jpg" />
-                <img src="./images/jpeg/small/team-4.jpg" alt="Наш сотрудник 4" />
-              </picture>
-              <picture class="team__picture--desktop">
-                <source srcset="./images/webp/small/team-4-desktop.webp 1x, ./images/webp/big/team-4-desktop.webp 2x" type="image/webp" />
-                <source srcset="./images/jpeg/small/team-4-desktop.jpg 1x, ./images/jpeg/big/team-4-desktop.jpg 2x" type="image/jpg" />
-                <img src="./images/jpeg/small/team-4-desktop.jpg" alt="Наш сотрудник 4" />
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/mobile/webp/small/team-4.webp 1x, ./images/mobile/webp/big/team-4.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/mobile/jpeg/small/team-4.jpg 1x, ./images/mobile/jpeg/big/team-4.jpg 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 1199px)"
+                  srcset="./images/tablet/webp/small/team-4.webp 1x, ./images/tablet/webp/big/team-4.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 1199px)"
+                  srcset="./images/tablet/jpeg/small/team-4.jpg 1x, ./images/tablet/jpeg/big/team-4.jpg 2x"
+                  type="image/jpg"
+                />
+                <source srcset="./images/desktop/webp/small/team-4.webp 1x, ./images/desktop/webp/big/team-4.webp 2x" type="image/webp" />
+                <source srcset="./images/desktop/jpeg/small/team-4.jpg 1x, ./images/desktop/jpeg/big/team-4.jpg 2x" type="image/jpg" />
+                <img src="./images/desktop/jpeg/small/team-4.jpg" alt="Наш сотрудник 4" />
               </picture>
               <div class="team__box">
                 <h3 class="team__title">Михаил Ермаков</h3>
