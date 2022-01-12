@@ -18,7 +18,7 @@
 
 .why-us {
   display: block;
-  &__item {
+  &__item:not(:last-child) {
     margin-bottom: 30px;
   }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -45,6 +45,9 @@
   text-transform: uppercase;
   margin-bottom: 10px;
   color: #212121;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .why-us__text {

@@ -218,15 +218,16 @@ img {
   font-weight: 700;
   font-size: 28px;
   line-height: 1.178;
+  margin-bottom: 30px;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 50px;
   color: #212121;
 }
 @media screen and (min-width: 1200px) {
   .section__title {
     font-size: 36px;
     line-height: 1.167;
+    margin-bottom: 50px;
   }
 }
 
@@ -293,7 +294,7 @@ button {
 .header {
   position: relative;
   margin-bottom: 0;
-  height: 80px;
+  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -301,6 +302,11 @@ button {
       -ms-flex-align: center;
           align-items: center;
   border-bottom: 1px solid #ececec;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    height: 80px;
+  }
 }
 
 .container__header {
@@ -453,10 +459,7 @@ button {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .header-contacts {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
+    display: block;
   }
   .header-contacts__item:not(:last-child) {
     margin-bottom: 10px;
@@ -645,6 +648,7 @@ button {
 
 /* заголовки в футере */
 .footer__title {
+  display: block;
   color: #fff;
   font-weight: 700;
   font-size: 14px;
@@ -663,6 +667,11 @@ button {
 /* стиль раздела соцсетей в футере */
 .footer-social-network__container {
   margin-top: 60px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-social-network__container {
+    margin-top: 0px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer-social-network__container {
@@ -694,9 +703,8 @@ button {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer--first-row {
     width: 100%;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
@@ -984,7 +992,7 @@ button {
 .why-us {
   display: block;
 }
-.why-us__item {
+.why-us__item:not(:last-child) {
   margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1020,6 +1028,11 @@ button {
   text-transform: uppercase;
   margin-bottom: 10px;
   color: #212121;
+}
+@media screen and (max-width: 767px) {
+  .why-us__title {
+    text-align: center;
+  }
 }
 
 .why-us__text {
@@ -1275,6 +1288,7 @@ button {
 /* окно на заднем фоне */
 .backdrop {
   position: fixed;
+  z-index: 12;
   top: 0;
   left: 0;
   width: 100%;
@@ -1283,7 +1297,7 @@ button {
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   -o-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding-top: 94px;
+  padding-top: 15px;
   padding-left: 15px;
   padding-right: 15px;
   overflow-y: scroll;
@@ -1687,7 +1701,14 @@ button {
 }
 
 .article__link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
   position: relative;
   overflow: hidden;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1748,6 +1769,9 @@ button {
 .article__container {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .article__title {

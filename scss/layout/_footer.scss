@@ -62,6 +62,7 @@
 /* заголовки в футере */
 
 .footer__title {
+  display: block;
   color: $color-accent-text;
   font-weight: 700;
   font-size: 14px;
@@ -79,6 +80,9 @@
 
 .footer-social-network__container {
   margin-top: 60px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-top: 0px;
+  }
   @media screen and (min-width: 1200px) {
     margin-top: 0;
     margin-left: 70px;
@@ -94,7 +98,7 @@
   }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 

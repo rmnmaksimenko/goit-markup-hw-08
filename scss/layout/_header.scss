@@ -4,7 +4,10 @@
   position: relative;
 
   margin-bottom: 0;
-  height: 80px;
+  height: 60px;
+  @media screen and (min-width: 768px) {
+    height: 80px;
+  }
   display: flex;
   align-items: center;
   border-bottom: 1px solid #ececec;
@@ -125,7 +128,7 @@
     }
   }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    flex-flow: column;
+    display: block;
     &__item:not(:last-child) {
       margin-bottom: 10px;
     }
