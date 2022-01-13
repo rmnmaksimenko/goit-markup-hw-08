@@ -771,14 +771,18 @@ button {
   display: -ms-flexbox;
   display: flex;
   margin-top: 60px;
-  max-width: 450px;
-  width: 100%;
+}
+@media screen and (max-width: 1199px) {
+  .footer-spam__container {
+    max-width: 450px;
+    width: 100%;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer-spam__container {
     max-width: auto;
     margin-top: 0;
-    margin-left: 93px;
+    margin-left: auto;
   }
 }
 
