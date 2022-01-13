@@ -707,6 +707,13 @@ button {
         justify-content: space-around;
   }
 }
+@media screen and (min-width: 1200px) {
+  .footer--first-row {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
 
 .footer--flex {
   display: -webkit-box;
@@ -767,9 +774,6 @@ button {
 
 /* стиль раздела с подпиской на рассылку */
 .footer-spam__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-top: 60px;
 }
 @media screen and (max-width: 1199px) {
@@ -780,9 +784,12 @@ button {
 }
 @media screen and (min-width: 1200px) {
   .footer-spam__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     max-width: auto;
     margin-top: 0;
-    margin-left: auto;
+    margin-left: 93px;
   }
 }
 
