@@ -8,24 +8,31 @@
 .nav-search {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 25px;
+  margin-top: -7.5px;
+  margin-bottom: calc(40px - 7.5px);
 
   @media screen and (min-width: 768px) {
     justify-content: center;
     flex-wrap: nowrap;
     align-items: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
     margin-bottom: 50px;
   }
 }
 
 .nav-search__item {
-  margin-bottom: 15px;
+  margin-top: 7.5px;
+  margin-bottom: 7.5px;
   // отступы между кнопками
   &:not(:last-child) {
     margin-right: 8px;
   }
 
   @media screen and (min-width: 768px) {
+    margin-top: 0;
     margin-bottom: 0;
   }
 }

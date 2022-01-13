@@ -121,10 +121,12 @@
 /* стиль раздела с подпиской на рассылку */
 
 .footer-spam__container {
+  display: flex;
   margin-top: 60px;
   max-width: 450px;
   width: 100%;
   @media screen and (min-width: 1200px) {
+    max-width: auto;
     margin-top: 0;
     margin-left: 93px;
   }
