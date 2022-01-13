@@ -63,7 +63,7 @@
     display: block;
     z-index: 10;
     top: calc(100% - 80px);
-    max-width: 480px;
+    // max-width: 480px;
     position: absolute;
     transform: translate(-50%, -100%);
     left: 50%;
@@ -194,9 +194,10 @@
   letter-spacing: 0.02em;
 
   // подчеркивание и подсветка текущей страницы
-  @media screen and (min-width: 768px) {
-    &--current {
-      color: $color-accent;
+
+  &--current {
+    color: $color-accent;
+    @media screen and (min-width: 768px) {
       &::after {
         content: '';
         position: absolute;
@@ -216,6 +217,9 @@
 .header-social-network {
   display: flex;
   flex-wrap: wrap;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
   @media screen and (min-width: 768px) {
     display: none;
   }

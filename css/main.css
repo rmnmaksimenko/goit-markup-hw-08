@@ -363,7 +363,6 @@ button {
     display: block;
     z-index: 10;
     top: calc(100% - 80px);
-    max-width: 480px;
     position: absolute;
     -webkit-transform: translate(-50%, -100%);
         -ms-transform: translate(-50%, -100%);
@@ -535,10 +534,10 @@ button {
     line-height: 1.142;
   }
 }
+.nav__link--current {
+  color: #2196f3;
+}
 @media screen and (min-width: 768px) {
-  .nav__link--current {
-    color: #2196f3;
-  }
   .nav__link--current::after {
     content: "";
     position: absolute;
@@ -560,6 +559,9 @@ button {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (min-width: 768px) {
   .header-social-network {
